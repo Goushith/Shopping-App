@@ -1,0 +1,72 @@
+
+
+<ng-container *ngIf="products.length!=0">
+    <div style="align-items: center;" class="container">
+        
+            <div class="card-table">
+                <div class="card-product">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Sr.no</th>
+                                <th>Product Name</th>
+                                <th>Product Image</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of products;let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{item.title}}</td>
+                                <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                                <td style="width: 25%;">{{item.description}}</td>
+                                <td style="width: 12%;">{{item.price}}</td>
+                                <td style="width: 12%;">{{item.quantity}}</td>
+                                <td style="width: 12%;">{{item.total}}</td>
+                                <td>
+                                    <button class="btn btn-danger" (click)="removeItem(item)"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"></td>
+                                <td><button (click)="emptyCart()" class="btn btn-danger">Empty cart</button></td>
+                                <td><button routerLink="/header" class="btn btn-primary">Shop cart</button></td>
+                                <td><button class="btn btn-success">Check out</button></td>
+                                <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    
+
+
+
+
+
+</ng-container>
+
+
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">
+                My Cart
+            </h5>
+        </div>
+        <div class="center ">
+            <img src="https://img.freepik.com/free-vector/man-shopping-supermarket_74855-7612.jpg?w=740&t=st=1670848503~exp=1670849103~hmac=a8130eaa8606adda919ca3acdb1604aaf6d0de59d14d6ac6133042d5ceb48287"
+                alt="">
+            <h4>Your Cart is empty</h4>
+            <h6>Add Item to your Cart</h6>
+            <button routerLink="/header" class="btn btn-primary">Shop now</button>
+        </div>
+    </div>
+</ng-container>

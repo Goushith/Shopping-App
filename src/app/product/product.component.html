@@ -1,0 +1,243 @@
+
+<header>
+  <nav>
+    <li><a  href="">All Products</a> </li>
+    <li><a  href="">Electronics</a> </li>
+    <li><a  href="">Garments</a> </li>
+    <li><a  href="">Jellwery</a> </li>
+    <!-- <li><a (click)="filter('')" href="">Special Attraction</a></li> -->
+  </nav>
+</header>
+
+
+
+
+<!-- Slider -->
+<div id="slider">
+  <div class="slides">
+    <div class="slider">
+      <!-- <div class="legend"></div> -->
+      <!-- <div class="content">
+        <div class="content-txt">
+          <h1>Lorem ipsum dolor</h1>
+          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+        </div>
+      </div> -->
+      <div class="image">
+        <img src="https://www.flashsaletricks.com/wp-content/uploads/2017/01/Flipkart_The_Apple_Fest_10-13Jan.png">
+      </div>
+    </div>
+    <div class="slider">
+      <!-- <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1>Lorem ipsum dolor</h1>
+          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+        </div>
+      </div> -->
+      <div class="image">
+        <img src="https://technosports.co.in/wp-content/uploads/2022/04/cfba139d-2ed6-4cd5-9ea2-5126a875d7a0.__CR001464600_PT0_SX1464_V1___.jpg">
+      </div>
+    </div>
+    <div class="slider">
+      <!-- <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1>Lorem ipsum dolor</h1>
+          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+        </div>
+      </div> -->
+      <div class="image">
+        <img src="https://www.flashsaletricks.com/wp-content/uploads/2016/12/Flipkart_Fashion_Sale_Womens_Clothing_offer_24-26Dec.png">
+      </div>
+    </div>
+    <div class="slider">
+      <!-- <div class="legend"></div>
+      <div class="content">
+        <div class="content-txt">
+          <h1>Lorem ipsum dolor</h1>
+          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+        </div>
+      </div> -->
+      <div class="image">
+        <img src="https://i.pinimg.com/originals/a4/65/94/a465940be66c0ddeeace1e5e286a2639.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="switch">
+    <ul>
+      <li>
+        <div class="on"></div>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="atmcards">
+  <div class="box uba">
+    <h1><i>UBA</i></h1>
+    <p>debit</p>
+    <h3>0000-1111-2222-3333-4444</h3>
+    <p class="date">Expires 06/22</p>
+    <h4 class="verve"><span>V</span>erve</h4>
+    <h4>Goushith C Mohan</h4>
+  </div>
+  <div class="box eco">
+    <h1><i>ECOBANK</i></h1>
+    <p>debit</p>
+    <h3>0000-1111-2222-3333-4444</h3>
+    <p class="date">Expires 06/22</p>
+    <h4 class="verve"><span>V</span>erve</h4>
+    <h4>Goushith C Mohan</h4>
+  </div>
+  <div class="box gtb">
+    <h1><i>GTbank</i></h1>
+    <p>debit</p>
+    <h3>0000-1111-2222-3333-4444</h3>
+    <p class="date">Expires 06/22</p>
+    <h4 class="verve"><span>V</span>erve</h4>
+    <h4>Goushith C Mohan</h4>
+  </div>
+
+
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList |filter:searchKey:'title'">
+      <div class="card col-md-2 ">
+        <img src="{{item.image}}" alt="">
+        <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{  item.title}}</h5>
+        <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;" >{{item.description}}</p>
+        <p><strong>Price : {{item.price}}</strong></p>
+        <button class="btn btn-success" (click)="addtocart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+    
+  </div>
+</div>
+
+
+<!-- 
+<div>
+  <section class="product">
+    <div class="container-fluid">
+      <div class="slider-wrap">
+        <div class="slider-main">
+
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+              <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+            </div>
+            <div class="product-details">
+              <span class="product-catagory">Women,bag</span>
+              <h4><a href="">Women leather bag</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>$96.00</small>$230.99</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-heart"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+
+        </div>
+       
+        
+      </div>
+    </div>
+   
+  </section>
+</div> -->

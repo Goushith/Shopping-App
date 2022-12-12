@@ -1,0 +1,55 @@
+<div class="login-fg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7 col-md-12 bg" style="background-image:url('https://s3.amazonaws.com/mobileappdaily/mad/uploads/img_best_shopping_apps.jpg')">
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-12 login">
+                <div class="login-section">
+                    <div class="logo clearfix">
+                        <a href="#">
+                            Shopping Cart
+                        </a>
+                    </div>
+                    <h3>Sign in into your account</h3>
+                    <ul class="social">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter twitter-i"></i><span>Twitter</span></a></li>
+                        <li><a href="#" class="google"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                    </ul>
+                    <div class="or-login clearfix">
+                        <span>Or</span>
+                    </div>
+                    <div class="form-container">
+                        <form [formGroup]="loginForm" >
+                            <div class="form-group form-fg">
+                                <input formControlName="email" type="email" name="email" class="input-text" placeholder="Email Address">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched " style="color: red;">Invalid Email</div>
+
+                            <div class="form-group form-fg">
+                                <input formControlName="pswd" type="password" name="password" class="input-text" placeholder="Password">
+                                <i class="fa fa-unlock-alt"></i>
+                            </div>
+                            <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched " style="color: red;">Invalid password</div>
+
+                            <div class="checkbox clearfix">
+                                <div class="form-check checkbox-fg">
+                                    <input class="form-check-input" type="checkbox" value="" id="remember">
+                                    <label class="form-check-label" for="remember">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#">Forgot Password</a>
+                            </div>
+                            <div class="form-group mt-2">
+                                <button type="submit" (click)="login()" class="btn-md btn-fg btn-block">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Don't have an account? <a routerLink="register" class="linkButton"> Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

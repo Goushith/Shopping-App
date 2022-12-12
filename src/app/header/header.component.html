@@ -1,0 +1,26 @@
+
+<HEADER>
+    <div class="navbar navbar-dark bg-dark sdadow-sm">
+<div class="navbar-brand align-item-center d-flex">
+    <i style="font-size: 25px;" class="fas fa-shipping-fast">
+        <strong>Shoppie </strong>
+    </i>
+</div>
+
+    <div class="right-container">
+        <input type="text" class="search-box" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search" />
+        <button class="sub-btn">Search</button>
+        <!-- <a href="#" class="login-link">login</a> &nbsp; &nbsp;&nbsp;&nbsp;
+        <a href="#" class="login-link">Register</a> -->
+      </div>
+
+      <button routerLink="/cart" class="btn btn-dark">
+        <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
+
+
+    </div>
+      <app-product></app-product>
+</HEADER>
+
